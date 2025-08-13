@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}404 - Page Not Found{% endblock %}
+
+{% block content %}
+<div class="min-h-[70vh] flex items-center justify-center">
+    <div class="text-center animate-fade-in">
+        <!-- 404 Icon -->
+        <div class="relative mb-8">
+            <div class="w-32 h-32 mx-auto relative">
+                <!-- Background glow -->
+                <div class="absolute inset-0 bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-full blur-2xl animate-pulse"></div>
+                
+                <!-- Main icon container -->
+                <div class="relative w-full h-full glass rounded-full flex items-center justify-center border border-red-400/30">
+                    <svg class="w-16 h-16 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error message -->
+        <div class="mb-8">
+            <h1 class="text-6xl font-bold gradient-text mb-4">404</h1>
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Page Not Found</h2>
+            <p class="text-gray-400 text-lg max-w-md mx-auto leading-relaxed">
+                {% if error_message %}
+                    {{ error_message }}
+                {% else %}
+                    The page you're looking for doesn't exist or you don't have permission to access it.
+                {% endif %}
+            </p>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="/" class="btn-primary px-8 py-3 rounded-lg font-medium text-white shadow-lg">
+                <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                Go Home
+            </a>
+            <a href="/files" class="glass px-8 py-3 rounded-lg font-medium text-gray-300 hover:text-white border border-gray-600 hover:border-gray-500 transition-all duration-300">
+                <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Browse Files
+            </a>
+        </div>
+
+        <!-- Additional info -->
+        {% if filename %}
+        <div class="mt-8 p-4 glass rounded-lg border border-gray-600/50 max-w-md mx-auto">
+            <p class="text-sm text-gray-400 mb-2">Requested file:</p>
+            <code class="text-red-400 font-mono text-sm break-all">{{ filename }}</code>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FileManager Pro{% endblock %}
+
+{% block content %}
+<div class="text-center space-y-8">
+    <!-- Hero Section -->
+    <div class="glass glass-hover rounded-3xl p-12 mb-12 animate-fade-in">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h1 class="text-6xl font-black gradient-text mb-6 leading-tight">
+                    Professional
+                    <span class="block text-4xl font-bold text-white mt-2">File Manager</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Access and manage your files securely with our modern and intuitive platform
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="/files" class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg">
+                    <span class="flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                        <span>Access Files</span>
+                    </span>
+                </a>
+                <a href="#features" class="bg-gray-800/50 hover:bg-gray-700/50 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 border border-gray-600/50 hover:border-gray-500/50">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="glass glass-hover rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="text-blue-400 mb-6">
+                <div class="relative">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    <div class="absolute inset-0 bg-blue-400/20 rounded-full blur-xl"></div>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Advanced Security</h3>
+            <p class="text-gray-400 leading-relaxed">Protection against directory traversal attacks with intelligent filtering and robust validation.</p>
+        </div>
+
+        <div class="glass glass-hover rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="text-green-400 mb-6">
+                <div class="relative">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div class="absolute inset-0 bg-green-400/20 rounded-full blur-xl"></div>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Modern Interface</h3>
+            <p class="text-gray-400 leading-relaxed">Intuitive user interface with glassmorphism design, dark theme and smooth animations.</p>
+        </div>
+
+        <div class="glass glass-hover rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.3s;">
+            <div class="text-purple-400 mb-6">
+                <div class="relative">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <div class="absolute inset-0 bg-purple-400/20 rounded-full blur-xl"></div>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Optimized Performance</h3>
+            <p class="text-gray-400 leading-relaxed">Fast file access with efficient memory management and asynchronous loading.</p>
+        </div>
+    </div>
+
+    <!-- Quick Access -->
+    <div class="glass glass-hover rounded-3xl p-12 animate-slide-up" style="animation-delay: 0.4s;">
+        <h2 class="text-4xl font-bold gradient-text mb-8">Quick Access</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="p-3 bg-blue-500/20 rounded-xl">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Download Files</h3>
+                </div>
+                <p class="text-gray-400 mb-6 leading-relaxed">Download your files securely from our server with an intuitive interface.</p>
+                <a href="/files" class="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:shadow-lg">
+                    <span>Download</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="p-3 bg-green-500/20 rounded-xl">
+                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">View Online</h3>
+                </div>
+                <p class="text-gray-400 mb-6 leading-relaxed">View your file content directly in the browser without downloading.</p>
+                <a href="/files" class="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:shadow-lg">
+                    <span>View</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

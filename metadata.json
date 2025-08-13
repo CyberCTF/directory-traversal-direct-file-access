@@ -1,0 +1,9 @@
+{
+  "lab_name": "path-traversal-bypass",
+  "lab_title": "Path Traversal - Bypass de Protection",
+  "lab_description": "Un portail d'administration de fichiers avec une vulnérabilité de path traversal. L'application filtre certains caractères mais peut être contournée.",
+  "element_to_proof": "Lecture de fichiers système via path traversal",
+  "final_flag_info": "Le flag se trouve dans /etc/passwd",
+  "walkthrough": "L'application filtre les séquences '../' mais pas les séquences encodées en URL. Utilisez l'encodage URL pour contourner la protection.",
+  "lab_readme": "# Path Traversal - Bypass de Protection\n\nUn portail d'administration de fichiers avec une vulnérabilité de path traversal. L'application implémente un filtre basique qui peut être contourné.\n\n## Objectif\nAccéder à des fichiers système en contournant les protections de path traversal.\n\n## Vulnérabilité\nL'application filtre les séquences '../' mais ne gère pas l'encodage URL.\n\n## Solution\nUtiliser l'encodage URL pour contourner le filtre (ex: %2e%2e%2f au lieu de ../)."
+}
